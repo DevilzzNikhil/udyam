@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 10vh;
+  background: linear-gradient(to right, #434343 0%, black 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  padding-right: 15px;
+}
+
+.info a {
+  text-decoration: none;
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+  margin: auto;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.info h4 {
+  font-size: x-large;
+  text-transform: capitalize;
+  margin-right: 1.2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.info h4:hover {
+  color: rgb(249, 143, 253);
+}
+.info a:hover {
+  color: rgb(249, 143, 253);
+}
+
+.logo {
+  cursor: pointer;
+  color: white;
+  font-size: xx-large;
+}
+
+.logo h3:hover {
+  color: rgb(180, 9, 186);
+}
+
+.container {
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  margin: auto;
+  background: linear-gradient(
+    89.7deg,
+    rgb(0, 32, 95) 2.8%,
+    rgb(132, 53, 142) 97.8%
+  );
+  padding: 20px 5px;
+  color: white;
+  border-radius: 15px;
+  width: 35%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.box .heading {
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.box .content {
+  margin: 15px;
+}
+
+.box .content h3 {
+  margin: 8px;
+  padding: 5px 0;
+  font-size: x-large;
+}
+.box .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.box .buttons a {
+  color: white;
+  border: solid black 1px;
+  padding: 8px;
+  text-decoration: none;
+  background: linear-gradient(
+    114.3deg,
+    rgb(19, 126, 57) 0.2%,
+    rgb(8, 65, 91) 68.5%
+  );
+  font-size: x-large;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.form {
+  margin: auto;
+  background: linear-gradient(
+    89.7deg,
+    rgb(0, 32, 95) 2.8%,
+    rgb(132, 53, 142) 97.8%
+  );
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  width: 30%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form .row {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  font-size: x-large;
+  padding: 5px 0;
+}
+
+.form .row input {
+  width: 100%;
+  margin: 0 0 0 15px;
+  padding: 8px;
+  border-radius: 5px;
+}
+.form .heading {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.form .input {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 5px;
+}
+
+.form button {
+  color: white;
+  border: solid black 1px;
+  padding: 8px;
+  text-decoration: none;
+  background: linear-gradient(
+    114.3deg,
+    rgb(19, 126, 57) 0.2%,
+    rgb(8, 65, 91) 68.5%
+  );
+  font-size: x-large;
+  border-radius: 5px;
+  text-align: center;
+  margin: 7px auto;
+  width: 75%;
+  cursor: pointer;
+}
+
+.form button a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .box {
+      width: 75%;
+    }
+    .form {
+        width: 55%;
+      }
+  }
+
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: x-large;
+  }
+  .info h4 {
+    font-size: large;
+  }
+  .info a {
+    font-size: large;
+  }
+  .box {
+    width: 95%;
+  }
+
+  .box .heading {
+    font-size: x-large;
+  }
+  .box .content h3 {
+    font-size: large;
+  }
+
+  .form {
+    width: 95%;
+  }
+}
+
+

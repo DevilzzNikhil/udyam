@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %} APP | REGISTER  {% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+  
+  <form action="" method="post" class="form">
+    {% csrf_token %}
+    <div class="heading">Register</div>
+    <hr>
+    <div class="input">
+        <div class="row">
+            <p>Username: </p>
+            <input type="text" name="username" placeholder="Your Username"  autofocus required />
+        </div>
+
+        <div class="row">
+            <p>Name: </p>
+            <input type="text" name="name" placeholder="Your Full Name"  autofocus required />
+        </div>
+
+        <div class="row">
+            <p>Email:</p>
+            <input type="email" name="email" placeholder="Your Email"  autofocus required />
+        </div>
+
+        <div class="row">
+            <p>Password:</p>
+            <input type="password" name="pass1" placeholder="Your Password"  autofocus required />
+        </div>
+
+        <div class="row">
+            <p>Confirm: </p>
+            <input type="password" name="pass2" placeholder="Confirm Your Password" autofocus required />
+        </div>
+    </div>
+
+    <button type="submit">Submit</button>
+
+  </form>
+</div>
+
+{% if messages %}
+{% for message in messages %}
+ {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}

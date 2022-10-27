@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+
+{% block title %} APP | HOME {% endblock %}
+
+{% block content %}
+
+    
+    <div class="container">
+        {% if user.is_authenticated %}
+        <div class="box">
+            <div class="heading"><h2>User Profile</h2></div>
+            <hr>
+            <div class="content">
+                <h3> Username : {{user.username}}</h3>
+                <h3> First Name : {{user.first_name}}</h3>
+                <h3> Last Name : {{user.last_name}} </h3>
+                <h3> Email : {{user.email}} </h3>
+            </div>
+            <div class="buttons">
+                <a href="/signout/">Log-Out</a>
+            </div>
+            
+        </div>
+        {% else %}
+        <div class="box">
+            <div class="heading"><h2>User Profile</h2></div>
+            <hr>
+            <div class="content">
+                <h3> Log-In First To See the Details Of User. You Can Also Log In through Google Account </h3>
+            </div>
+            <div class="buttons">
+                <a href="/login/">Log-In</a>
+                <a href="/register/">Sign-In</a>
+            </div>
+            
+        </div>
+
+        {% endif %}
+    </div>  
+    
+
+{% endblock  %}
+    

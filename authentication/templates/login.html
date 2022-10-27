@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+{% load socialaccount %}
+
+
+
+{% block title %} APP | LOGIN{% endblock  %}
+
+{% block content %}
+    <div class="container">
+      <form action="" method="post" class="form">
+
+        {% csrf_token %}
+        <div class="heading">Log In </div>
+        <hr>
+        <div class="input">
+            <div class="row">
+                <p>Username: </p>
+                <input type="text" name="username" placeholder="Username"  autofocus required />
+            </div>
+    
+            <div class="row">
+                <p>Password: </p>
+                <input type="password" id="pass1" name="pass1" placeholder="Enter Your Password" autofocus required />
+            </div>
+        </div>
+        <button><a href="{% provider_login_url 'google' %}">Login With Google</a></button>
+        <button type="submit">Submit</button>
+
+      </form>
+    </div>
+
+{% endblock %}
